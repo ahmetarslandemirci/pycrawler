@@ -4,21 +4,10 @@ This repo presents Crawler class. Crawler class can go to any domain or/and it's
 ### Example Usage
 ```
 import crawler
-import re
 
-c = crawler.Crawler("http://yoururl.com")
-c.keywords = ["word1"]
-c.except_extensions = [".pdf"] 
-c.depth = 1
-c.content_regex = "<div>(.+)<\\div>"
-c.allow_subdomain = False
-
-for result in c.parse():
-    print(result)
+site = "http://www.targetsite.com/"
+c = Crawler(site,limit=50,data_regex="search_regex",debug_mode=False)
 ```
 
-__keywords__: This defines the words that crawler will search for on the page.
-__except_extensions__:  Crawler will not follow these extensions.
-__depth__: Maximum depth
-__content_regex__: This field indicates exactly where the words are to be searched. 
-__allow_subdomain__: If it is not True, crawler will not follow subdomains.
+__limit__: Queue limit
+__data_regex__:  This variable indicates what content will be searched. 
