@@ -1,6 +1,5 @@
 # pycrawler
-This repo presents Crawler class. Crawler class can go to any domain or/and it's subdomains and it returns requested data. Crawler uses DFS algorithm. If you use this class and you get an error please let me know.
-
+This repo presents Crawler class. Crawler class can go to any domain and it returns requested data. 
 ### Example Usage
 ```
 import crawler
